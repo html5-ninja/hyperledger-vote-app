@@ -76,6 +76,7 @@ composer card import -f admin@vote-network.card
 composer network ping -c admin@vote-network
 ```
 <hr>
+
 ## Run the app
 first we need to install node modules, should be done **once**.
 
@@ -122,27 +123,29 @@ Now we will add candidates this is the assets on our business network
 ]
 ```
 
-
-
-
-
 ### Start the app server side
+
 ```
 cd [path to hyperledger-vote-app]/vote-app/server/
 node app.js
 ```
 
 ### Start the app client side
+
 ```
 cd [path to hyperledger-vote-app]/vote-app/client/
 npm start
 ```
+
 <hr>
+
 ## Have fun
+
 If everything goes right open http://localhost:3002
 
 <hr>
-My to do list
+
+My to do list<br>
 - TODO[ ] : Deploying a Hyperledger Composer blockchain business network to Hyperledger Fabric (multiple organizations)
 - TODO[ ] : Better UI
 - TODO[ ] : fix minors bugs
