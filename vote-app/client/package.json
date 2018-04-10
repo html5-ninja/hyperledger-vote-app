@@ -1,0 +1,25 @@
+{
+  "name": "web-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "mo-js": "^0.288.2",
+    "moment": "^2.22.0",
+    "node-rest-client": "^3.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-flatpickr": "^3.6.4",
+    "react-loader": "^2.4.3",
+    "react-scripts": "1.1.1",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3002",
+  "homepage":"./"
+}

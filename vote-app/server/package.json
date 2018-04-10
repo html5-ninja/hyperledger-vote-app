@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "vote server side app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zied hosni",
+  "email": "zied.hosni.mail@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "composer-client": "^0.19.0",
+    "express": "^4.16.3",
+    "node-rest-client": "^3.1.0",
+    "underscore": "^1.8.3"
+  }
+}

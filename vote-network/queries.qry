@@ -1,0 +1,14 @@
+query selectVoteByVoter {
+  description: "a vote by voter"
+  statement:
+      SELECT org.acme.votenetwork.MakeVote
+          WHERE (voter == _$voter)
+}
+
+query listVotes{
+  description: "List last votes"
+  statement:
+      SELECT org.acme.votenetwork.MakeVote
+          WHERE (timestamp > _$minDate AND timestamp  < _$maxDate)
+            ORDER BY [timestamp DESC]
+}

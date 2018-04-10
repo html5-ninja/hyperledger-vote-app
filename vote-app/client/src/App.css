@@ -1,0 +1,72 @@
+body{
+    overflow-x: hidden;
+}
+.break{
+  word-break: break-word;
+}
+.spinnerLoger{
+  margin-top: 80px;
+  padding-bottom: 20px;
+}
+div[data-name="mojs-shape"]{
+  z-index: -1
+}
+.img-block{
+  background-color: #fff;
+  overflow: hidden;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  border-radius: 100%;
+  border:8px solid whitesmoke;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 1px 1px;
+  background-position: center center;
+  background-size: cover;
+}
+.img-block .hover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.img-block .hover.voted,.img-block .hover.true,.hover.loading{
+  opacity: 1;
+}
+
+.img-block:hover .hover{
+  opacity: 1;
+}
+.vote-btn{
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  left:-1%;
+  top: -1%;
+  background: transparent;
+  cursor: pointer;
+}
+.vote-btn .fa-thumbs-up{
+  color:#fff;
+  font-size: 3em;
+  opacity: 0.5;
+}
+.hover.true .vote-btn .fa-thumbs-up{
+  display: none;
+}
+.hover.true.voted .vote-btn .fa-thumbs-up{
+  opacity:1;
+  display: inline-block;
+}
+.candidates-list{
+  min-height: 290px;
+}
+
+.tx{
+  min-height: 30px !important;
+  word-break: break-word;
+}
