@@ -78,19 +78,24 @@ composer network ping -c admin@vote-network
 <hr>
 ## Run the app
 first we need to install node modules, should be done **once**.
+
 ```
 cd [path to hyperledger-vote-app]/vote-app/server/
 npm install
 ```
+
 ```
 cd [path to hyperledger-vote-app]/vote-app/client/
 npm install
 ```
+
 ```
 cd [path to hyperledger-vote-app]/vote-network/
 npm install
 ```
+
 ### Start the composer REST SERVER
+
 ```
 cd [path to hyperledger-vote-app]/vote-network/
 composer-rest-server -c admin@vote-network -n never -w true
