@@ -18,6 +18,7 @@ The web app interact with hyperledger through the composer REST JSON server..
   > The web app client app built with Reactjs ... the fun part.
 
 <hr>
+
 ## Install
 
 ### 1/ Get the Repo
