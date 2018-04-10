@@ -19,19 +19,29 @@ The web app interact with hyperledger through the composer REST JSON server..
 
 <hr>
 ## Install
+
 ### 1/ Get the Repo
+
 ```
 git clone https://github.com/html5-ninja/hyperledger-vote-app.git
 ```
 
 ### 2/ Fabric & Composer
+
 Now you need to get **hyperledger fabric** and   **hyperledger composer** , all you need is here
+
 #### - Installing pre-requisites
+
 https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html
+
 #### - Installing the development environment
+
 https://hyperledger.github.io/composer/latest/installing/development-tools.html
+
 <br>Note : Skip the **Start the web app ("Playground")** section.
+
 ### 3/ Deploying to Hyperledger Fabric for a single organization
+
 ```
 cd ~/fabric-tools
 ./stopFabric.sh
@@ -39,39 +49,51 @@ cd ~/fabric-tools
 ./downloadFabric.sh
 ./startFabric.sh
 ```
+
 ```
 composer card delete -c PeerAdmin@fabric-network
 composer card delete -c admin@vote-network
 ```
+
 ```
 rm -fr ~/.composer
 ```
+
 ##### Creating a business network card for the Hyperledger Fabric administrator
+
 ```
 composer card create -p connection.json -u PeerAdmin -c admincerts/Admin@org1.example.com-cert.pem -k keystore/xxxxxxx_your_keyxxxxxxxxx_sk -r PeerAdmin -r ChannelAdmin
 ```
+
 Replace xxxxxxx_your_keyxxxxxxxxx_sk with your key , visit https://hyperledger.github.io/composer/latest/tutorials/deploy-to-fabric-single-org "Step Four: Locating the certificate and private key for the Hyperledger Fabric administrator" for more details.
 
 ##### Importing the business network card
+
 ```
 composer card import -f PeerAdmin@vote-network.card
 ```
 
 ### 4/ Installing the Hyperledger Composer business network
+
 we will install our vote app bna file
+
 ```
 composer network install -c PeerAdmin@fabric-network -a [path to repo]/vote-network/vote-network@0.0.6.bna
 ```
+
 ### 5/  Starting the blockchain business network
+
 ```
 composer network start --networkName vote-network --networkVersion 0.0.6 -A admin -S adminpw -c PeerAdmin@fabric-network
 ```
 
 ### 6/ Importing the business network card for the business network administrator
+
 ```
 composer card import -f admin@vote-network.card
 ```
 ### 7/ Testing the connection to the blockchain business network
+
 ```
 composer network ping -c admin@vote-network
 ```
